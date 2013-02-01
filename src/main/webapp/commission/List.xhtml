@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListCommissionTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListCommissionEmpty}" rendered="#{commissionController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{commissionController.items.rowCount > 0}">
+                    <h:outputText value="#{commissionController.pagination.pageFirstItem + 1}..#{commissionController.pagination.pageLastItem + 1}/#{commissionController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{commissionController.previous}" value="#{bundle.Previous} #{commissionController.pagination.pageSize}" rendered="#{commissionController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{commissionController.next}" value="#{bundle.Next} #{commissionController.pagination.pageSize}" rendered="#{commissionController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{commissionController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCommissionTitle_id}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCommissionTitle_number}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.number}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCommissionTitle_customerDescription}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.customerDescription}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCommissionTitle_equipmentDescription}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.equipmentDescription}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCommissionTitle_status}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.status}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{commissionController.prepareView}" value="#{bundle.ListCommissionViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{commissionController.prepareEdit}" value="#{bundle.ListCommissionEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{commissionController.destroy}" value="#{bundle.ListCommissionDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{commissionController.prepareCreate}" value="#{bundle.ListCommissionCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListCommissionIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

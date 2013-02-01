@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditCommissionTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditCommissionLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{commissionController.selected.id}" title="#{bundle.EditCommissionTitle_id}" />
+                    <h:outputLabel value="#{bundle.EditCommissionLabel_number}" for="number" />
+                    <h:inputText id="number" value="#{commissionController.selected.number}" title="#{bundle.EditCommissionTitle_number}" required="true" requiredMessage="#{bundle.EditCommissionRequiredMessage_number}"/>
+                    <h:outputLabel value="#{bundle.EditCommissionLabel_customerDescription}" for="customerDescription" />
+                    <h:inputText id="customerDescription" value="#{commissionController.selected.customerDescription}" title="#{bundle.EditCommissionTitle_customerDescription}" required="true" requiredMessage="#{bundle.EditCommissionRequiredMessage_customerDescription}"/>
+                    <h:outputLabel value="#{bundle.EditCommissionLabel_equipmentDescription}" for="equipmentDescription" />
+                    <h:inputText id="equipmentDescription" value="#{commissionController.selected.equipmentDescription}" title="#{bundle.EditCommissionTitle_equipmentDescription}" required="true" requiredMessage="#{bundle.EditCommissionRequiredMessage_equipmentDescription}"/>
+                    <h:outputLabel value="#{bundle.EditCommissionLabel_status}" for="status" />
+                    <h:selectOneMenu id="status" value="#{commissionController.selected.status}" title="#{bundle.EditCommissionTitle_status}" required="true" requiredMessage="#{bundle.EditCommissionRequiredMessage_status}">
+                        <f:selectItems value="#{statusController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{commissionController.update}" value="#{bundle.EditCommissionSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditCommissionViewLink}"/>
+                <br />
+                <h:commandLink action="#{commissionController.prepareList}" value="#{bundle.EditCommissionShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditCommissionIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

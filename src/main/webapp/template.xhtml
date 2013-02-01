@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title><ui:insert name="title">Default Title</ui:insert></title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+        <h:outputStylesheet name="css/screen.css"/>
+        <link href="css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+        <!--[if lte IE 6]><link href="css/msie.css" type="text/css" rel="stylesheet" media="screen,projection" /><![endif]-->
+    </h:head>
+
+    <h:body>
+        <div id="layout">
+            <div id="header">
+                <h1 id="logo"><a href="http://www.free-css.com/">mint<span class="light">idea</span><span class="leaf">&nbsp;</span></a></h1>
+                <hr class="noscreen" />
+                <p class="noscreen noprint"> <em>Skip to <a href="#obsah">content</a>, <a href="#nav">navigation</a>.</em> </p>
+                <hr class="noscreen" />
+                <div id="nav" class="box">
+                    <ul>
+                        <li><h:link outcome="/commission/List" value="Zlecenia"/></li>
+                        <li><h:link outcome="/status/List" value="Statusy"/></li>
+                        <li><h:link outcome="/user/List" value="Użytkownicy"/></li>
+                    </ul>
+                    <hr class="noscreen" />
+                </div>
+                <div id="container" class="box">
+                    <h1>
+                        <ui:insert name="title">Default Title</ui:insert>
+                    </h1>
+                    <p>
+                        <ui:insert name="body">Default Body</ui:insert>
+                    </p>
+                </div>
+                <div id="footer"> <span class="f-left">&copy; 2008 <a href="http://www.free-css.com/">E-Serwis</a></span></div>
+            </div>
+        </div>
+    </h:body>
+
+</html>

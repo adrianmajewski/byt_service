@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="nominalhours/View.xhtml" x="1400" y="450" zoom="true"/>
+        <Node id="index.jsp" x="400" y="450" zoom="true"/>
+        <Node id="template.xhtml" x="150" y="1200" zoom="true"/>
+        <Node id="specialdays/Create.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="nominalhours/List.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="workunit/View.xhtml" x="400" y="1050" zoom="true"/>
+        <Node id="typeactivity/Edit.xhtml" x="1150" y="600" zoom="true"/>
+        <Node id="contract/View.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="worker/List.xhtml" x="900" y="450" zoom="true"/>
+        <Node id="percentagerate/List.xhtml" x="1650" y="300" zoom="true"/>
+        <Node id="typeactivity/View.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="workunit/List.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="percentagerate/View.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="nominalhours/Create.xhtml" x="1900" y="150" zoom="true"/>
+        <Node id="percentagerate/Create.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="contract/Create.xhtml" x="650" y="600" zoom="true"/>
+        <Node id="worker/Create.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="workunit/Create.xhtml" x="900" y="750" zoom="true"/>
+        <Node id="activity/Edit.xhtml" x="150" y="900" zoom="true"/>
+        <Node id="typeactivity/Create.xhtml" x="650" y="900" zoom="true"/>
+        <Node id="activity/View.xhtml" x="150" y="1050" zoom="true"/>
+        <Node id="worker/Edit.xhtml" x="400" y="900" zoom="true"/>
+        <Node id="nominalhours/Edit.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="contract/Edit.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="typeactivity/List.xhtml" x="400" y="750" zoom="true"/>
+        <Node id="percentagerate/Edit.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="specialdays/View.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="specialdays/List.xhtml" x="900" y="600" zoom="true"/>
+        <Node id="activity/Create.xhtml" x="1150" y="450" zoom="true"/>
+        <Node id="workunit/Edit.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="specialdays/Edit.xhtml" x="1400" y="300" zoom="true"/>
+        <Node id="index.xhtml" x="1650" y="150" zoom="true"/>
+        <Node id="contract/List.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="worker/View.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="activity/List.xhtml" x="150" y="150" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
