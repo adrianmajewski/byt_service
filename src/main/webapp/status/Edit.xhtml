@@ -15,8 +15,6 @@
             </h:panelGroup>
             <h:form>
                 <h:panelGrid columns="2">
-                    <h:outputLabel value="#{bundle.EditStatusLabel_id}" for="id" />
-                    <h:inputText id="id" value="#{statusController.selected.id}" title="#{bundle.EditStatusTitle_id}" />
                     <h:outputLabel value="#{bundle.EditStatusLabel_name}" for="name" />
                     <h:inputText id="name" value="#{statusController.selected.name}" title="#{bundle.EditStatusTitle_name}" required="true" requiredMessage="#{bundle.EditStatusRequiredMessage_name}"/>
                     <h:outputLabel value="#{bundle.EditStatusLabel_description}" for="description" />

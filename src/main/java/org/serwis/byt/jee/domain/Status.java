@@ -58,4 +58,9 @@ public class Status  implements Serializable {
     public void setCommissions(List<Commission> commissions) {
         this.commissions = commissions;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

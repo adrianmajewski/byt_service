@@ -15,8 +15,6 @@
             </h:panelGroup>
             <h:form>
                 <h:panelGrid columns="2">
-                    <h:outputLabel value="#{bundle.CreateCommissionLabel_id}" for="id" />
-                    <h:inputText id="id" value="#{commissionController.selected.id}" title="#{bundle.CreateCommissionTitle_id}" />
                     <h:outputLabel value="#{bundle.CreateCommissionLabel_number}" for="number" />
                     <h:inputText id="number" value="#{commissionController.selected.number}" title="#{bundle.CreateCommissionTitle_number}" required="true" requiredMessage="#{bundle.CreateCommissionRequiredMessage_number}"/>
                     <h:outputLabel value="#{bundle.CreateCommissionLabel_customerDescription}" for="customerDescription" />

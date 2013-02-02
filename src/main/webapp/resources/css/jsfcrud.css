@@ -80,3 +80,10 @@ tr.jsfcrud_even_row {
     left: 50%;
     top: 50%;
 }
+
+.search {
+    width: 300px;
+    height: 30px;
+    font-size: 22px;
+    color: #a0a9b0;
+}

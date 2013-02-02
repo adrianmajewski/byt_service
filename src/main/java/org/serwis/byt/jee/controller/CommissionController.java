@@ -28,8 +28,11 @@ public class CommissionController implements Serializable {
     private org.serwis.byt.jee.facade.CommissionFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
-
+    private String search;
+    
+    
     public CommissionController() {
+        search = "Szukaj... (Enter)";
     }
 
     public Commission getSelected() {
@@ -152,6 +155,11 @@ public class CommissionController implements Serializable {
         }
     }
 
+    public DataModel searchCommissions() {
+        items = new ListDataModel(ejbFacade.searchCommissions(search));
+        return items;
+    }
+    
     public DataModel getItems() {
         if (items == null) {
             items = getPagination().createPageDataModel();
@@ -185,6 +193,14 @@ public class CommissionController implements Serializable {
 
     public SelectItem[] getItemsAvailableSelectOne() {
         return JsfUtil.getSelectItems(ejbFacade.findAll(), true);
+    }
+
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
     }
 
     @FacesConverter(forClass = Commission.class)
